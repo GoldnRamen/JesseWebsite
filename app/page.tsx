@@ -76,9 +76,9 @@ export default function Home() {
                     duration: 0.9,
                     ease: [0.16, 1, 0.3, 1],
                   }}
-                  className="text-[11px] tracking-[.32em] text-white/45"
+                  className="text-[11px] flex tracking-[.32em] text-white/45"
                 >
-                  3D ARTIST / MOTION DESIGNER
+                  3D ARTIST <p className="text-red-900">/</p> MOTION DESIGNER
                 </motion.div>
               </div>
               <div className="mask mt-4">
@@ -153,7 +153,8 @@ export default function Home() {
               <h2 className="text-5xl font-light tracking-[-.05em] md:text-8xl">
                 SELECTED
                 <br />
-                WORK
+                <span className="text-white/35">WORK</span>
+                <span className="text-[#e33b2f]">.</span>
               </h2>
             </div>
             <span className="hidden text-[10px] tracking-[.2em] text-white/35 md:block">
@@ -179,8 +180,9 @@ export default function Home() {
               02 — Visual experiments
             </p>
             <h2 className="text-5xl font-light tracking-[-.05em] md:text-8xl">
-              MOTION /<br />
-              EXPERIMENTS
+              MOTION <span className="text-red-800">/</span><br />
+              <span className="text-white/35">EXPERIMENTS</span>
+              <span className="text-[#e33b2f]">.</span>
             </h2>
           </Reveal>
         </div>
@@ -249,7 +251,9 @@ export default function Home() {
             <h2 className="mt-5 max-w-5xl text-[clamp(4rem,10vw,10rem)] font-light leading-[.82] tracking-[-.07em]">
               LET'S MAKE
               <br />
-              <span className="text-white/30">SOMETHING.</span>
+              <span className="text-white/30">SOMETHING</span>
+              <span className="text-[#e33b2f]">.</span>
+              
             </h2>
             <div className="mt-12 flex flex-wrap gap-4">
               <Magnetic>

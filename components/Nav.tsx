@@ -1,4 +1,7 @@
 "use client";
+import Image from "next/image";
+import { CldImage } from "next-cloudinary";
+
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Magnetic from "./Magnetic";
@@ -25,9 +28,16 @@ export default function Nav() {
         }}
         className="fixed inset-x-0 top-0 z-50 px-5 md:px-8"
       >
-        <nav className="mx-auto flex max-w-[1500px] items-center justify-between rounded-full border border-white/10 bg-black/40 px-4 py-2 backdrop-blur-xl">
-          <a href="#top" className="text-sm font-semibold tracking-[.2em]">
-            JND
+        <nav className="mx-auto flex max-w-[1500px] items-center justify-between rounded-full border border-white/10 bg-black/40 px-4 py-0 backdrop-blur-xl">
+          <a href="#top" className="text-center text-sm font-semibold tracking-[.2em] ">
+             <CldImage
+              src="https://res.cloudinary.com/do2yiivip/image/upload/v1791320428/logo_jmahsj.png"
+              alt="Cloudinary Hosted Image"
+              width={100}
+              height={100}
+              className="rounded-lg object-cover"
+              priority // Add priority if the image appears above the fold (hero section)
+            />
           </a>
           <div className="hidden items-center gap-7 md:flex">
             {links.map(([n, h]) => (

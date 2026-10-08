@@ -35,7 +35,7 @@ export default function CustomCursor() {
 
   return (
     <motion.div
-      className="pointer-events-none fixed left-0 top-0 z-[100] hidden md:flex items-center justify-center rounded-full border border-white/60 mix-blend-difference"
+      className="pointer-events-none fixed left-0 top-0 z-[100] hidden md:flex items-center justify-center rounded-full border-3 border-red-800" /** mix-blend-difference */
       style={{ x: sx, y: sy }}
       animate={{
         width: view ? 76 : active ? 34 : 10,
@@ -45,7 +45,7 @@ export default function CustomCursor() {
       }}
       transition={{ type: "spring", stiffness: 400, damping: 28 }}
     >
-      {view && <span className="text-[9px] tracking-[.18em]">VIEW</span>}
+      {view && <span className="text-[9px] font-extrabold text-red-950 tracking-[.18em]">VIEW</span>}
     </motion.div>
   );
 }

@@ -72,3 +72,8 @@ a {
     transition-duration: 0.001ms !important;
   }
 }
+
+.logo-img{
+    width: 100px;
+    height: 100px;
+}
