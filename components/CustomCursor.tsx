@@ -35,7 +35,7 @@ export default function CustomCursor() {
 
   return (
     <motion.div
-      className="pointer-events-none fixed left-0 top-0 z-[100] hidden md:flex items-center justify-center rounded-full border-3 border-red-800" /** mix-blend-difference */
+      className="pointer-events-none fixed left-0 top-0 z-100 hidden md:flex items-center justify-center rounded-full border-3 border-red-800" /** mix-blend-difference */
       style={{ x: sx, y: sy }}
       animate={{
         width: view ? 76 : active ? 34 : 10,

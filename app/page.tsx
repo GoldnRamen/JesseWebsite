@@ -1,11 +1,13 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect,useRef } from "react";
 import Intro from "../components/Intro";
 import Nav from "../components/Nav";
 import CustomCursor from "../components/CustomCursor";
 import Reveal from "../components/Reveal";
 import Magnetic from "../components/Magnetic";
 import ProjectCard from "../components/ProjectCard";
+import Carousel from "../components/CarouselComponent";
 const projects = [
   {
     id: "monolith",
@@ -41,6 +43,8 @@ const projects = [
       "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85",
   },
 ];
+
+
 export default function Home() {
   const { scrollYProgress } = useScroll();
   const heroY = useTransform(scrollYProgress, [0, 0.25], [0, -90]);
@@ -154,7 +158,7 @@ export default function Home() {
                 SELECTED
                 <br />
                 <span className="text-white/35">WORK</span>
-                <span className="text-[#e33b2f]">.</span>
+                <span className="text-[#e33b2f]">:</span>
               </h2>
             </div>
             <span className="hidden text-[10px] tracking-[.2em] text-white/35 md:block">
@@ -179,29 +183,18 @@ export default function Home() {
             <p className="mb-3 text-[9px] uppercase tracking-[.3em] text-white/40">
               02 — Visual experiments
             </p>
+
             <h2 className="text-5xl font-light tracking-[-.05em] md:text-8xl">
-              MOTION <span className="text-red-800">/</span><br />
+              MOTION <span className="text-red-800">/</span>
+              <br />
               <span className="text-white/35">EXPERIMENTS</span>
-              <span className="text-[#e33b2f]">.</span>
+              <span className="text-[#e33b2f]">:</span>
             </h2>
           </Reveal>
         </div>
-        <div className="mt-16 flex w-max gap-4 pl-5 md:pl-10">
-          <div className="flex h-[45vh] w-[70vw] max-w-[900px] items-end bg-[linear-gradient(135deg,#151515,#2c2c2c)] p-7 md:w-[55vw]">
-            <span className="text-4xl font-light tracking-[-.04em]">
-              FORM / LIGHT / SPACE
-            </span>
-          </div>
-          <div className="flex h-[45vh] w-[70vw] max-w-[900px] items-end bg-[linear-gradient(135deg,#211b19,#151515)] p-7 md:w-[55vw]">
-            <span className="text-4xl font-light tracking-[-.04em]">
-              MOVING IDEAS
-            </span>
-          </div>
-          <div className="flex h-[45vh] w-[70vw] max-w-[900px] items-end bg-[linear-gradient(135deg,#171719,#30231f)] p-7 md:w-[55vw]">
-            <span className="text-4xl font-light tracking-[-.04em]">
-              CGI / MOTION
-            </span>
-          </div>
+
+        <div className="mt-16 overflow-hidden">
+          <Carousel />
         </div>
       </section>
       <section
@@ -252,7 +245,7 @@ export default function Home() {
               LET'S MAKE
               <br />
               <span className="text-white/30">SOMETHING</span>
-              <span className="text-[#e33b2f]">.</span>
+              <span className="text-[#e33b2f]">!</span>
               
             </h2>
             <div className="mt-12 flex flex-wrap gap-4">
