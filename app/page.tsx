@@ -185,7 +185,7 @@ export default function Home() {
             </p>
 
             <h2 className="text-5xl font-light tracking-[-.05em] md:text-8xl">
-              MOTION <span className="text-red-800">/</span>
+              MOTION <span className="text-[#e33b2f]">/</span>
               <br />
               <span className="text-white/35">EXPERIMENTS</span>
               <span className="text-[#e33b2f]">:</span>
