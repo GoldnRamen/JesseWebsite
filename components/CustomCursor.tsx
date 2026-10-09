@@ -5,6 +5,9 @@ import { useEffect, useState } from "react";
 export default function CustomCursor() {
   const [active, setActive] = useState(false);
   const [view, setView] = useState(false);
+
+  const [isDefault, setIsDefault] = useState(false);
+
   const x = useMotionValue(-100);
   const y = useMotionValue(-100);
   const sx = useSpring(x, { stiffness: 500, damping: 35 });
@@ -20,7 +23,16 @@ export default function CustomCursor() {
     };
     const over = (e: Event) => {
       const el = e.target as HTMLElement;
-      const hit = !!el.closest("a,button,[data-cursor]");
+      const disableCustomCursor = !!el.closest("[data-cursor='default']");
+
+      setIsDefault(disableCustomCursor);
+      if (disableCustomCursor) {
+        document.documentElement.classList.remove("cursor-none");
+      } else {
+        document.documentElement.classList.add("cursor-none");
+      }
+
+      const hit = !!el.closest("a,button,[data-cursor]:not([data-cursor='default'])");
       setActive(hit);
       setView(!!el.closest("[data-cursor='view']"));
     };

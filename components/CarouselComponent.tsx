@@ -39,7 +39,7 @@ export default function Carousel() {
           behavior: "smooth",
         });
       }
-    }, 3000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
@@ -51,22 +51,29 @@ export default function Carousel() {
         ref={carouselRef}
         className="flex w-full gap-4 overflow-x-auto scrollbar-hide pl-5 md:pl-10"
       >
-        <div className="flex h-[45vh] min-w-[70vw] max-w-[900px] flex-shrink-0 items-end bg-[linear-gradient(135deg,#151515,#2c2c2c)] p-7 md:min-w-[55vw]">
-          <span className="text-4xl font-light tracking-[-.04em]">
-            FORM / LIGHT / SPACE
-          </span>
+        <div className="bg-[url('https://res.cloudinary.com/do2yiivip/image/upload/v1791549703/img7_qya7q4.jpg')] bg-cover bg-center bg-no-repeat flex justify-end h-[45vh] min-w-[70vw] max-w-[900px] flex-shrink-0 items-end bg-[linear-gradient(135deg,#171719,#30231f)] p-7 md:min-w-[55vw]">        
+          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-1 shadow-lg max-w-fit">
+            <span className="text-xl font-light tracking-[-.04em] text-gray-800">
+              FORM / LIGHT / SPACE
+            </span>
+          </div>          
         </div>
 
-        <div className="flex h-[45vh] min-w-[70vw] max-w-[900px] flex-shrink-0 items-end bg-[linear-gradient(135deg,#211b19,#151515)] p-7 md:min-w-[55vw]">
-          <span className="text-4xl font-light tracking-[-.04em]">
-            MOVING IDEAS
-          </span>
+        
+        <div className="bg-[url('https://res.cloudinary.com/do2yiivip/image/upload/v1791549724/img20_oydnqo.jpg')] bg-cover bg-center bg-no-repeat flex justify-end h-[45vh] min-w-[70vw] max-w-[900px] flex-shrink-0 items-end bg-[linear-gradient(135deg,#171719,#30231f)] p-7 md:min-w-[55vw]">
+         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-1 shadow-lg max-w-fit">
+            <span className="text-xl font-light tracking-[-.04em] text-white">
+              MOVING IDEAS
+            </span>
+          </div>
         </div>
 
-        <div className="flex h-[45vh] min-w-[70vw] max-w-[900px] flex-shrink-0 items-end bg-[linear-gradient(135deg,#171719,#30231f)] p-7 md:min-w-[55vw]">
-          <span className="text-4xl font-light tracking-[-.04em]">
-            CGI / MOTION
-          </span>
+        <div className="bg-[url('https://res.cloudinary.com/do2yiivip/image/upload/v1791552234/img2_dcvhpf.jpg')] bg-cover bg-center bg-no-repeat flex justify-end h-[45vh] min-w-[70vw] max-w-[900px] flex-shrink-0 items-end bg-[linear-gradient(135deg,#171719,#30231f)] p-7 md:min-w-[55vw]">        
+          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-1 shadow-lg max-w-fit">
+            <span className="text-xl font-light tracking-[-.04em] text-white">
+              CGI / MOTION
+            </span>
+          </div>
         </div>
       </div>
 

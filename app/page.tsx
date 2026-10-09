@@ -8,6 +8,7 @@ import Reveal from "../components/Reveal";
 import Magnetic from "../components/Magnetic";
 import ProjectCard from "../components/ProjectCard";
 import Carousel from "../components/CarouselComponent";
+import About from "../components/AboutModal";
 const projects = [
   {
     id: "monolith",
@@ -15,7 +16,7 @@ const projects = [
     category: "ARCHVIZ",
     year: "2026",
     image:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85",
+      "https://res.cloudinary.com/do2yiivip/image/upload/v1791549702/img3_zaei44.jpg",
     large: true,
   },
   {
@@ -24,7 +25,7 @@ const projects = [
     category: "PRODUCT / CGI",
     year: "2026",
     image:
-      "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=1400&q=85",
+      "https://res.cloudinary.com/do2yiivip/image/upload/v1791549713/img16_jwz3ds.jpg",
   },
   {
     id: "after-dark",
@@ -32,7 +33,7 @@ const projects = [
     category: "MOTION",
     year: "2026",
     image:
-      "https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1400&q=85",
+      "https://res.cloudinary.com/do2yiivip/image/upload/v1791549726/img22_xqonjx.jpg",
   },
   {
     id: "quiet-space",
@@ -40,7 +41,7 @@ const projects = [
     category: "ARCHVIZ",
     year: "2025",
     image:
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85",
+      "https://res.cloudinary.com/do2yiivip/image/upload/v1791549701/img5_bxmbxz.jpg",
   },
 ];
 
@@ -176,6 +177,7 @@ export default function Home() {
       </section>
       <section
         id="motion"
+        data-cursor="default" 
         className="overflow-hidden border-y border-white/10 bg-[#0b0b0b] py-28 md:py-40"
       >
         <div className="px-5 md:px-10">
@@ -199,38 +201,10 @@ export default function Home() {
       </section>
       <section
         id="about"
+        data-cursor="default"
         className="mx-auto max-w-[1500px] px-5 py-28 md:px-10 md:py-40"
       >
-        <div className="grid gap-16 lg:grid-cols-[.7fr_1.3fr]">
-          <Reveal>
-            <p className="text-[9px] uppercase tracking-[.3em] text-white/40">
-              03 — About
-            </p>
-          </Reveal>
-          <Reveal>
-            <p className="max-w-4xl text-3xl font-light leading-tight tracking-[-.03em] md:text-6xl">
-              I’m Jesse — a 3D artist focused on turning spaces, products and
-              concepts into images that feel{" "}
-              <span className="text-white/35">
-                cinematic, considered and alive.
-              </span>
-            </p>
-            <div className="mt-12 grid gap-8 border-t border-white/10 pt-8 text-xs text-white/45 md:grid-cols-3">
-              <div>
-                <b className="mb-2 block text-white">3D</b>Blender · Modeling ·
-                Lighting · Rendering
-              </div>
-              <div>
-                <b className="mb-2 block text-white">DESIGN</b>Composition · Art
-                direction · Visual systems
-              </div>
-              <div>
-                <b className="mb-2 block text-white">MOTION</b>Animation ·
-                Motion graphics · Storytelling
-              </div>
-            </div>
-          </Reveal>
-        </div>
+        <About />
       </section>
       <section
         id="contact"
