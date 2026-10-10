@@ -2,6 +2,7 @@
 
 import { JSX, useEffect, useState } from "react";
 import Reveal from "./Reveal";
+import { CldImage } from "next-cloudinary";
 
 export default function About():JSX.Element {
 const [isMounted, setIsMounted] = useState(false);
@@ -60,12 +61,12 @@ return (
 <>
 {/* About section */} 
 <section
-     id="about"
-     
-     className="border-y border-white/10 bg-[#0b0b0b] py-28 md:py-40"
-   > <div className="grid gap-16 px-5 md:px-10 lg:grid-cols-[.7fr_1.3fr]"> <Reveal> <p className="text-[9px] uppercase tracking-[.3em] text-white/40">
-03 — About </p> </Reveal>
-
+    id="about"     
+    className="border-y border-white/10 bg-[#0b0b0b] py-28 md:py-40">
+    <div className="grid gap-16 px-5 md:px-10 lg:grid-cols-[.7fr_1.3fr]">
+      <Reveal>
+        <p className="text-[9px] uppercase tracking-[.3em] text-white/40"> 03 — About </p> 
+      </Reveal>
       <Reveal>
         <p className="max-w-4xl text-3xl font-light leading-tight tracking-[-.03em] md:text-6xl">
           I’m Jesse — a 3D artist focused on turning spaces, products and
@@ -144,10 +145,10 @@ return (
         </header>
 
         {/* Independently scrollable content */}
-        <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain">
-          <div className="grid min-h-full lg:grid-cols-[1fr_.8fr]">
+        <div className="min-h-0 flex-1 lg:overflow-y-hidden scrollbar-thin scrollbar-thumb-orange-900 overflow-y-auto overscroll-contain">
+          <div className="relative grid min-h-full lg:grid-cols-[1fr_.8fr]">
             {/* Text content */}
-            <div className="px-6 py-12 md:px-10 md:py-16">
+            <div className="px-6 py-12 md:px-10 md:py-16 lg:h-[90vh] lg:overflow-y-auto scrollbar-thin scrollbar-thumb-orange-900 overscroll-contain">
               <p className="mb-5 text-[9px] uppercase tracking-[.3em] text-white/40">
                 A little more about me
               </p>
@@ -235,20 +236,28 @@ return (
             </div>
 
             {/* Visual panel */}
-            <div className="relative min-h-[350px] overflow-hidden border-t border-white/10 lg:sticky lg:top-0 lg:h-full lg:border-l lg:border-t-0">
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_30%,#45382d_0%,#1c1b1a_35%,#0b0b0b_75%)]" />
+            <div className="min-h-[350px] overflow-hidden border-t border-white/10 lg:sticky lg:top-0 lg:h-full lg:border-l lg:border-t-0">
+              <div className="relative">
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_30%,#45382d_0%,#1c1b1a_35%,#0b0b0b_75%)]" />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
 
-              <div className="absolute bottom-8 left-6 right-6 md:bottom-12 md:left-10 md:right-10">
-                <p className="mb-3 text-[9px] uppercase tracking-[.3em] text-white/40">
-                  The philosophy
-                </p>
+                <div className="lg:sticky lg:overflow-hidden">
+                  <CldImage src="https://res.cloudinary.com/do2yiivip/image/upload/v1791545462/CGI_motion_ql02gn.jpg" 
+                    alt="Cloudinary Hosted Image"
+                    height={300}
+                    width={600} className="mb-10" />
+                  <div className="absolute left-6 right-6  md:left-10 md:right-10">
+                    <p className="mb-3 text-[9px] uppercase tracking-[.3em] text-white/40">
+                      The philosophy
+                    </p>
 
-                <p className="max-w-md text-3xl font-light leading-tight tracking-[-.04em] md:text-5xl">
-                  Light. Material.
-                  <span className="text-white/35"> Emotion.</span>
-                </p>
+                    <p className="max-w-md text-3xl font-light leading-tight tracking-[-.04em] md:text-5xl">
+                      Light. Material.
+                      <span className="text-white/35"> Emotion.</span>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

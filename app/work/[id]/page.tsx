@@ -6,7 +6,7 @@ const data: Record<
   string,
   { title: string; category: string; year: string; image: string; desc: string }
 > = {
-  monolith: {
+  "monolith": {
     title: "MONOLITH",
     category: "ARCHVIZ",
     year: "2026",
@@ -100,7 +100,7 @@ export default function Project() {
             <p className="mt-3 text-sm">Composition / Atmosphere / Motion</p>
           </div>
         </div>
-      </section>
+      </section>      
     </main>
   );
 }

@@ -24,11 +24,12 @@ export default function Nav() {
       <motion.header
         animate={{
           paddingTop: scrolled ? 12 : 24,
-          paddingBottom: scrolled ? 12 : 24,
-        }}
+          paddingBottom: scrolled ? 12 : 24,          
+        }}        
+        data-cursor="default"
         className="fixed inset-x-0 top-0 z-50 px-5 md:px-8"
       >
-        <nav className="mx-auto flex max-w-[1500px] items-center justify-between rounded-full border border-white/10 bg-black/40 px-4 py-0 backdrop-blur-xl">
+        <nav className="mx-auto flex max-w-[1500px] items-center justify-between rounded-full border border-white/10 bg-black/40 px-4 py-0 backdrop-blur-xl">          
           <a href="#top" className="text-center text-sm font-semibold tracking-[.2em] ">
              <CldImage
               src="https://res.cloudinary.com/do2yiivip/image/upload/v1791320428/logo_jmahsj.png"
@@ -63,7 +64,7 @@ export default function Nav() {
             onClick={() => setOpen(!open)}
             className="flex h-9 w-9 items-center justify-center md:hidden"
           >
-            <span className="text-lg">{open ? "×" : "☰"}</span>
+            <span className="text-lg cursor-pointer">{open ? "×" : "☰"}</span>
           </button>
         </nav>
       </motion.header>
@@ -72,10 +73,11 @@ export default function Nav() {
           <motion.div
             initial={{ clipPath: "inset(0 0 100% 0)" }}
             animate={{ clipPath: "inset(0 0 0% 0)" }}
-            exit={{ clipPath: "inset(0 0 100% 0)" }}
-            className="fixed inset-0 z-40 flex flex-col justify-end bg-[#080808] p-6 pb-12 md:hidden"
+            exit={{ clipPath: "inset(0 0 100% 0)" }}            
+            data-cursor="default"
+            className="fixed inset-0 z-40 flex flex-col justify-center bg-[#080808] p-6 pb-0 md:hidden"
           >
-            <div className="space-y-3">
+            <div className="space-y-10 ">
               {links.map(([n, h], i) => (
                 <motion.a
                   initial={{ y: 30, opacity: 0 }}
@@ -84,7 +86,7 @@ export default function Nav() {
                   onClick={() => setOpen(false)}
                   key={n}
                   href={h}
-                  className="block text-5xl font-light"
+                  className="block text-3xl font-light"
                 >
                   {n}
                 </motion.a>

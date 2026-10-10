@@ -9,6 +9,10 @@ import Magnetic from "../components/Magnetic";
 import ProjectCard from "../components/ProjectCard";
 import Carousel from "../components/CarouselComponent";
 import About from "../components/AboutModal";
+import BackToTop from "../components/BackToTop";
+
+import { FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
 const projects = [
   {
     id: "monolith",
@@ -123,7 +127,7 @@ export default function Home() {
                 <Magnetic>
                   <a
                     href="#work"
-                    className="rounded-full bg-gray-700 px-5 py-3 text-[9px] font-semibold tracking-[.2em] text-black"
+                    className="rounded-full bg-white/45 px-5 py-3 text-[9px] font-semibold tracking-[.2em] text-black"
                   >
                     VIEW MY WORK ↘
                   </a>
@@ -150,7 +154,7 @@ export default function Home() {
         className="mx-auto max-w-[1500px] px-5 py-28 md:px-10 md:py-40"
       >
         <Reveal>
-          <div className="mb-12 flex items-end justify-between border-b border-white/10 pb-5">
+          <div className="mb-12 flex relative items-end justify-between border-b border-white/10 pb-5">
             <div>
               <p className="mb-3 text-[9px] uppercase tracking-[.3em] text-white/40">
                 01 — Selected work
@@ -172,8 +176,11 @@ export default function Home() {
             <Reveal key={p.id} delay={i * 0.06}>
               <ProjectCard p={p} />
             </Reveal>
-          ))}
+          ))}          
         </div>
+        <Magnetic>
+          <p className="justify-end mx-auto w-fit my-5 text-white/30 font-light text-[12px] tracking-[.1em] hover:text-white hover:border rounded-xl p-2">SEE ALL CREATIONS →</p>
+        </Magnetic>
       </section>
       <section
         id="motion"
@@ -202,7 +209,7 @@ export default function Home() {
       <section
         id="about"
         data-cursor="default"
-        className="mx-auto max-w-[1500px] px-5 py-28 md:px-10 md:py-40"
+        className="mx-auto max-w-[1500px] px-5 py-20 md:px-5 "
       >
         <About />
       </section>
@@ -219,28 +226,41 @@ export default function Home() {
               LET'S MAKE
               <br />
               <span className="text-white/30">SOMETHING</span>
-              <span className="text-[#e33b2f]">!</span>
+              <span className="text-[#e33b2f] text-[clamp(2rem,13vw,13rem)]">!</span>
               
             </h2>
-            <div className="mt-12 flex flex-wrap gap-4">
-              <Magnetic>
-                <a
-                  href="mailto:jdabup@gmail.com"
-                  className="rounded-full bg-gray-700 px-6 py-4 text-[10px] font-semibold tracking-[.2em] text-black"
-                >
-                  JDABUP@GMAIL.COM ↗
+            <div data-cursor="default" className="mt-12 flex flex-wrap gap-4">
+              <Magnetic className="flex gap-5 items-center hover:text-[#e33b2f] ">
+                <a href="mailto:jdabup@gmail.com"
+                  className="rounded-full text-center align-middle px-6 py-4 text-[10px] font-semibold tracking-[.2em] text-black flex gap-2" >
+                  <IoMdMail className="text-white text-lg" />
+                  - JDABUP@GMAIL.COM ↗
                 </a>
               </Magnetic>
-              <a
-                href="#top"
-                className="rounded-full border border-white/15 px-6 py-4 text-[10px] tracking-[.2em] text-white/70"
-              >
-                BACK TO TOP ↑
-              </a>
+              <Magnetic className="flex gap-5 items-center cursor-pointer hover:text-[#e33b2f] ">
+                <a className="rounded-full px-6 py-4  font-semibold tracking-[.2em] text-black text-[10px] flex gap-2" >
+                  <FaInstagram className="text-white text-lg" />
+                  - JDABUP/PROFILE ↗
+                </a>     
+              </Magnetic>
+              <Magnetic className="flex gap-5 items-center cursor-pointer hover:text-[#e33b2f] ">           
+                <a className="rounded-full px-6 py-4  font-semibold tracking-[.2em] text-black text-[10px] flex gap-2" >
+                  <FaXTwitter className="text-white text-lg"/>
+                  - JDABUP/PROFILE ↗
+                </a>    
+              </Magnetic>
+              <Magnetic className="flex gap-5 items-center cursor-pointer hover:text-[#e33b2f] ">
+                <a className="rounded-full px-6 py-4  font-semibold tracking-[.2em] text-black text-[10px] flex gap-2" >
+                  <FaLinkedinIn className="text-white text-lg"/>
+                  - JDABUP/PROFILE ↗
+                </a>                
+              </Magnetic>
+              
             </div>
           </Reveal>
         </div>
       </section>
+      <BackToTop />
       <footer className="flex flex-col justify-between gap-4 border-t border-white/10 px-5 py-7 text-[9px] uppercase tracking-[.2em] text-white/35 md:flex-row md:px-10">
         <span>© 2026 JND</span>
         <span>3D ARTIST / MOTION DESIGNER</span>
