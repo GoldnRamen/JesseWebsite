@@ -11,7 +11,7 @@ const data: Record<
     category: "ARCHVIZ",
     year: "2026",
     image:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=90",
+      "https://res.cloudinary.com/do2yiivip/image/upload/v1791549702/img3_zaei44.jpg",
     desc: "An architectural study focused on light, material contrast and quiet cinematic framing.",
   },
   "zero-point": {
@@ -19,7 +19,7 @@ const data: Record<
     category: "PRODUCT / CGI",
     year: "2026",
     image:
-      "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=2200&q=90",
+      "https://res.cloudinary.com/do2yiivip/image/upload/v1791549713/img16_jwz3ds.jpg",
     desc: "A product visualization exploring a clean sci-fi language through form, lighting and controlled reflections.",
   },
   "after-dark": {
@@ -27,7 +27,7 @@ const data: Record<
     category: "MOTION",
     year: "2026",
     image:
-      "https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=2200&q=90",
+      "https://res.cloudinary.com/do2yiivip/image/upload/v1791549726/img22_xqonjx.jpg",
     desc: "A motion experiment built around atmosphere, contrast and the feeling of moving through an unknown space.",
   },
   "quiet-space": {
@@ -35,7 +35,7 @@ const data: Record<
     category: "ARCHVIZ",
     year: "2025",
     image:
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2200&q=90",
+      "https://res.cloudinary.com/do2yiivip/image/upload/v1791549701/img5_bxmbxz.jpg",
     desc: "A study in restrained interior composition, warm light and spatial storytelling.",
   },
 };
