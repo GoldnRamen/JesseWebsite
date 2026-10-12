@@ -52,8 +52,8 @@ export default function Carousel() {
         className="flex w-full gap-4 overflow-x-auto scrollbar-hide pl-5 md:pl-10"
       >
         <div className="bg-[url('https://res.cloudinary.com/do2yiivip/image/upload/v1791549703/img7_qya7q4.jpg')] bg-cover bg-center bg-no-repeat flex justify-end h-[45vh] min-w-[70vw] max-w-[900px] flex-shrink-0 items-end bg-[linear-gradient(135deg,#171719,#30231f)] p-7 md:min-w-[55vw]">        
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-1 shadow-lg max-w-fit">
-            <span className="text-xl font-light tracking-[-.04em] text-gray-800">
+          <div className="bg-white/10 backdrop-blur-md border-5 border-white/20 rounded-xl p-2 shadow-lg max-w-fit">
+            <span className="text-lg font-light tracking-[-.04em] text-gray-800">
               FORM / LIGHT / SPACE
             </span>
           </div>          
@@ -61,16 +61,16 @@ export default function Carousel() {
 
         
         <div className="bg-[url('https://res.cloudinary.com/do2yiivip/image/upload/v1791549724/img20_oydnqo.jpg')] bg-cover bg-center bg-no-repeat flex justify-end h-[45vh] min-w-[70vw] max-w-[900px] flex-shrink-0 items-end bg-[linear-gradient(135deg,#171719,#30231f)] p-7 md:min-w-[55vw]">
-         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-1 shadow-lg max-w-fit">
-            <span className="text-xl font-light tracking-[-.04em] text-white">
+         <div className="bg-white/10 backdrop-blur-md border-5 border-white/20 rounded-xl p-2 shadow-lg max-w-fit">
+            <span className="text-lg font-light tracking-[-.04em] text-white">
               MOVING IDEAS
             </span>
           </div>
         </div>
 
         <div className="bg-[url('https://res.cloudinary.com/do2yiivip/image/upload/v1791552234/img2_dcvhpf.jpg')] bg-cover bg-center bg-no-repeat flex justify-end h-[45vh] min-w-[70vw] max-w-[900px] flex-shrink-0 items-end bg-[linear-gradient(135deg,#171719,#30231f)] p-7 md:min-w-[55vw]">        
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-1 shadow-lg max-w-fit">
-            <span className="text-xl font-light tracking-[-.04em] text-white">
+          <div className="bg-white/10 backdrop-blur-md border-5  border-red-900 rounded-xl p-2 shadow-lg max-w-fit">
+            <span className="text-lg font-light tracking-[-.04em] text-white">
               CGI / MOTION
             </span>
           </div>

@@ -236,18 +236,18 @@ return (
             </div>
 
             {/* Visual panel */}
-            <div className="min-h-[350px] overflow-hidden border-t border-white/10 lg:sticky lg:top-0 lg:h-full lg:border-l lg:border-t-0">
+            <div className=" min-h-[500px] overflow-hidden border-t border-white/10 lg:sticky lg:top-0 lg:h-full lg:border-l lg:border-t-0">
               <div className="relative">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_30%,#45382d_0%,#1c1b1a_35%,#0b0b0b_75%)]" />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
 
-                <div className="lg:sticky lg:overflow-hidden">
+                <div className="relative h-[100vh] lg:sticky lg:overflow-hidden">
                   <CldImage src="https://res.cloudinary.com/do2yiivip/image/upload/v1791545462/CGI_motion_ql02gn.jpg" 
                     alt="Cloudinary Hosted Image"
                     height={300}
                     width={600} className="mb-10" />
-                  <div className="absolute left-6 right-6  md:left-10 md:right-10">
+                  <div className="mx-5">
                     <p className="mb-3 text-[9px] uppercase tracking-[.3em] text-white/40">
                       The philosophy
                     </p>
